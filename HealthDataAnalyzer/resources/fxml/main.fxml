@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox stylesheets="@../stylesheets/main.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TreeView fx:id="TreeView" prefWidth="200.0" />
+      <VBox>
+         <children>
+            <StackPane prefWidth="1000.0">
+               <children>
+                  <BarChart fx:id="mBarChart" prefWidth="1000.0" visible="false">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                  </BarChart>
+                  <LineChart fx:id="mLineChart" prefWidth="1000.0" visible="false">
+                     <xAxis><NumberAxis label="Date" lowerBound="0" tickUnit="1" upperBound="3" /></xAxis>
+                     <yAxis><NumberAxis label="Weight" lowerBound="0" tickUnit="1" upperBound="3" /></yAxis>
+                  </LineChart>
+                  <ImageView fx:id="heartIcon" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets top="50.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <HBox fx:id="statsContainer" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="statsContainer" visible="false">
+               <children>
+                  <HBox alignment="CENTER" prefWidth="500.0" spacing="20.0" style="-fx-border-width: 0 1 0 0; -fx-border-color: #c8c8c8;">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Text fx:id="statsSteps" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                              <Text fx:id="statsMean" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Text fx:id="statsDays" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                              <Text fx:id="statsMedian" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="500.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Text fx:id="statsBestMonth" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                              <Text fx:id="statsWorstMonth" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Text fx:id="statsBestDay" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                              <Text fx:id="statsWorstDay" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,42 @@
+{
+  "StepCount":
+  {
+    "2015":
+    {
+
+    },
+    "2016":
+    {
+      "01":
+      [
+        "Record",
+        "Record",
+        "Record"
+      ],
+      "02":
+      [
+        "Record",
+        "Record",
+        "Record"
+      ]
+    }
+  },
+  "BodyMass":
+  [
+
+  ]
+}
+
+/*
+Check if type exists
+Check if year exists
+
+if not, create year and fill with all months
+add record to correct month
+
+
+if it does, go to correct month and check if date exists
+
+if date does exist, increment with new value
+if not, create new Record object for date
+*/

@@ -1,0 +1,21 @@
+Stats:
+    All/Year:
+        Steps
+        Days
+        Mean
+        Median
+        Best Day (Date + Value)
+        Worst Day (Date + Value)
+        Best Month (Month + Value)
+        Worst Month (Month + Value)
+
+    Month:
+        Steps
+        Days
+        Mean
+        Median
+        Best Day (Date + Value)
+        Worst Day (Date + Value)
+
+    Day:
+        Steps
